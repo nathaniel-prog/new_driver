@@ -1,0 +1,31 @@
+
+{% load static %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Title</title>
+</head>
+<body>
+
+
+<h2> list of driver for netanya</h2>
+
+
+
+{% for driver in object_list %}
+<ul>
+    <a href="{% url 'driver' driver.pk %}">here
+    <li> {{driver.name}}, {{driver.id}} here</li>
+        </a>
+
+</ul>
+{% endfor %}
+
+
+
+</body>
+</html>

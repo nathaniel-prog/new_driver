@@ -1,0 +1,45 @@
+<html>
+
+<head>
+
+
+</head>
+
+
+
+<body>
+
+
+<div>
+
+
+<form method="POST" >
+    <table>
+        {{ form.as_p }}
+    </table>
+    {% csrf_token %}
+    <button type="submit"> send</button>
+</form>
+
+
+
+</div>
+
+<h2>{{text}}</h2>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+</html>

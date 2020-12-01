@@ -1,0 +1,30 @@
+
+
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chauffeurId</title>
+   <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<h1> {{object.name}}</h1>
+
+<ul>
+
+    <li> {{object.date_of_birth}}</li>
+
+</ul>
+
+
+<img src="{{ object.car_image}}" alt="connect" style="max-height:300px">
+
+<p>{{object.phone_number}}</p>
+
+{% if user.request == 'Get' %}
+<button class="btn" ,  type="button"> send sms</button> {{call_chauffeur}}
+
+{% endif %}
+</body>
+</html>

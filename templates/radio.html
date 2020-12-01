@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+
+
+<form action method="post">
+  <label for="male">Male</label>
+     {%csrf_token%}
+    {% for chauffeur in chauffeurs %}
+    {% if chauffeur.name=='nat' %}
+  <input type="radio" name="gender" id="male" value<li>{{chauffeur}}</li>><br>
+  <label for="female">Female</label>
+  <input type="radio" name="gender" id="female" value="victor"><br>
+  <label for="other">Other</label>
+  <input type="radio" name="gender" id="other" value="gerard"><br><br>
+  <input type="submit" value="Submit">
+    {% endif %}
+    {% endfor %}
+</form>
+
+
+</body>
+</html>
